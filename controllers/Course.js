@@ -170,7 +170,7 @@ exports.editCourse = async (req, res) => {
 		});
 	} catch (error) {
 		console.error(error);
-		res.status(500).json({
+		return res.status(500).json({
 			success: false,
 			message: "Internal server error",
 			error: error.message,
@@ -285,7 +285,7 @@ exports.getFullCourseDetails = async (req, res) => {
 			courseID: courseId,
 			userId: userId,
 		});
-		console.log("courseProgressCount : ", courseProgressCount);
+		// console.log("courseProgressCount : ", courseProgressCount);
 
 		// if (courseDetails.status === "Draft") {
 		//   return res.status(403).json({

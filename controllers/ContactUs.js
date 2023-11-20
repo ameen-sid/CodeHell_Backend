@@ -19,7 +19,7 @@ exports.contactUsController = async (req, res) => {
 			)
 		);
 
-		console.log("Mail Response: ", emailResponse);
+		// console.log("Mail Response: ", emailResponse);
 
 		return res.status(200).json({
 			success: true,

@@ -139,7 +139,7 @@ exports.updateDisplayPicture = async (req, res) => {
 			1000,
 			1000
 		);
-		console.log(image);
+		// console.log(image);
 
 		const updatedProfile = await User.findByIdAndUpdate(
 			{ _id: userId },
@@ -265,9 +265,15 @@ exports.instructorDashboard = async (req, res) => {
 			return courseDataWithStats;
 		});
 
-		res.status(200).json({ courses: courseData });
+		return res.status(200).json({
+			success: true,
+			courses: courseData,
+		});
 	} catch (error) {
 		console.error(error);
-		res.status(500).json({ message: "Server Error" });
+		return res.status(500).json({
+			success: false,
+			message: "Server Error",
+		});
 	}
 };
