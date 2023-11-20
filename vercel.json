@@ -8,8 +8,8 @@
 	],
 	"routes": [
 			{
-				"src": "/.*",
-				"dest": "https://my-old-site.com"
+				"src": "/(.*)",
+				"dest": "/"
 			}
 	]
 }
