@@ -43,7 +43,7 @@ const {
 	getAllRating,
 } = require("../controllers/RatingAndReviews");
 
-const { updateCourseProgress } = require("../controllers/courseProgress");
+const { updateCourseProgress } = require("../controllers/CourseProgress");
 
 // Import the Required Middlewares
 const {
