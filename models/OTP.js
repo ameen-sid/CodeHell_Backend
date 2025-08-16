@@ -29,7 +29,7 @@ async function sendVerificationEmail(email, otp) {
 	// Send the email
 
 	// set default mail
-	const defaultMail = "1.tempo.mail@gmail.com";
+	const defaultMail = "ameensid7@gmail.com";
 	try {
 		await mailSender(
 			defaultMail,
